@@ -56,17 +56,17 @@ function playRound(userChoice) {
 //This function will compare scores// 
 function endGame() {
     if (userScore > 4 && comScore < 5) {
-        final.textContent = "Game Over!" + "\n" + `You win ${userScore} to ${comScore}`;
+        final.textContent = "Game Over!" + "\n" + `You win ${userScore} to ${comScore}!`;
     }
     else if (comScore > 4 && userScore < 5) {
-        final.textContent = "Game Over..." + '\n' +`You lose ${comScore} to ${userScore}`;
+        final.textContent = "Game Over..." + '\n' +`You lose ${comScore} to ${userScore}!`;
     }
 }
 
 //Helper Functions//
 function resetGame() {
     score.textContent = `You: 0 || COM: 0 || Tie: 0`;
-    final.textContent = '';
+    final.textContent = 'Choose your Option!';
     results.textContent = '';
     comScore = 0;
     userScore = 0;
