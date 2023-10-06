@@ -1,3 +1,5 @@
+const para = document.querySelector('.para');
+
 const rock = document.querySelector('#rock');
     rock.addEventListener('click', () => {
     playRound('Rock');
@@ -19,7 +21,7 @@ reset.addEventListener('click', () => {
 });    
 
 const score = document.querySelector('#score');
-score.textContent = `You: 0 || COM: 0 || Tie: 0`;
+score.textContent = `You: 0 || Com: 0 || Tie: 0`;
 const results = document.querySelector('#results');
 const final = document.querySelector('#final');
 
@@ -34,22 +36,25 @@ function playRound(userChoice) {
     if(userScore < 5 && comScore < 5){
     if (pc === "Rock" && userChoice === "Paper" || pc === "Paper" && userChoice === "Scissors" || pc === "Scissors" && userChoice === "Rock") {
         userScore++;
-        score.textContent = `You: ${userScore} || COM: ${comScore} || Tie: ${tieScore}`;
+        score.textContent = `You: ${userScore} || Com: ${comScore} || Tie: ${tieScore}`;
         results.textContent = `Win: ${userChoice} beats ${pc}!`;
+        para.style.backgroundColor = "#97cba9";
         endGame();
     }
 
     else if (userChoice === "Paper" && pc === "Scissors" || userChoice === "Scissors" && pc === "Rock" || userChoice === "Rock" && pc === "Paper") {
         comScore++;
-        score.textContent = `You: ${userScore} || COM: ${comScore} || Tie: ${tieScore}`;
+        score.textContent = `You: ${userScore} || Com: ${comScore} || Tie: ${tieScore}`;
         results.textContent = `Lose: ${pc} beats ${userChoice}...`;
+        para.style.backgroundColor = "#d64161";
         endGame();
     }
 
     else if ( userChoice == pc) {
         tieScore++;
-        score.textContent = `You: ${userScore} || COM: ${comScore} || Tie: ${tieScore}`;
+        score.textContent = `You: ${userScore} || Com: ${comScore} || Tie: ${tieScore}`;
         results.textContent = `It's a tie!`;
+        para.style.backgroundColor = "rgb(216, 214, 214)";
         }}
 }
 
@@ -68,6 +73,7 @@ function resetGame() {
     score.textContent = `You: 0 || COM: 0 || Tie: 0`;
     final.textContent = 'Choose your Option!';
     results.textContent = '';
+    para.style.backgroundColor = "rgb(216, 214, 214)";
     comScore = 0;
     userScore = 0;
     tieScore = 0;
