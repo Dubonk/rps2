@@ -57,6 +57,7 @@ body {
     background-color: #668ba4;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     height: 50%;
 }
@@ -76,18 +77,18 @@ button {
     
 }
 
+button:hover {
+    transform: scale(1.1);
+    background-color: #f3fed8;
+}
+
 button:active {
-    transform: translateY(4px);
+    transform: scale(1.0);
 }
 
 #reset {
     background-color: #c01d4e;
 }
-
-#reset:hover {
-    background-color: #c01d4e;
-}
-
 .footer {
     position: fixed;
     bottom: 0;
