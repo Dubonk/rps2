@@ -70,7 +70,7 @@ function endGame() {
 
 //Helper Functions//
 function resetGame() {
-    score.textContent = `You: 0 || COM: 0 || Tie: 0`;
+    score.textContent = `You: 0 || Com: 0 || Tie: 0`;
     final.textContent = 'Choose your Option!';
     results.textContent = '';
     para.style.backgroundColor = "rgb(216, 214, 214)";
