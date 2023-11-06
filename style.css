@@ -1,21 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+* {
+    margin: 0;
+}
 body {
     font-family: 'roboto', sans-serif;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     height: 100vh;
-    margin: 0;
+    width: 100%;
     color: white;
     background: linear-gradient(to top, #09203f 0%, #537895 100%);
-
 }
 
 .title {
-    position: fixed;
-    top: 0;
     margin-top: 0;
     text-align: center;
     padding-top: 10px;
@@ -25,11 +24,10 @@ body {
 
 #gameContainer {
     color: black;
-    width: 550px;
+    width: 400px;
     height: 600px;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0px 5px 20px rgb(0, 0, 0);
+    border-radius: 8px;
+    box-shadow: -2px 2px 10px black;
 }
 
 .header {
@@ -37,54 +35,58 @@ body {
     justify-content: center;
     background-color: rgb(39, 39, 39);
     color: white;
-    min-height: 80px;
     height: 20%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 #final {
     display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
+    padding: 10px;
 }
 
 .para {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: center;
     min-height: 80px;
     height: 30%;
     font-size: xx-large;
     background-color: rgb(216, 214, 214);
-    box-shadow: 0px 2px 10px rgb(46, 46, 46);
 }
 
 .buttons {
     background-color: rgb(39, 39, 39);
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     height: 50%;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 button {
-    margin: 25px;
+    margin: 5px;
     padding: 15px 25px;
     font-size: 24px;
     text-align: center;
     cursor: pointer;
     outline: none;
     color: #fff;
-    background-color: #b2cbcf;
+    background-color: #407088;
     border: none;
     border-radius: 15px;
     box-shadow: 0px 1px 10px rgb(7, 7, 7);
 }
 
 button:hover {
-    transform: scale(1.1);
-    background-color: white;
+    background-color: rgb(50, 223, 243);
 }
 
 button:active {
@@ -92,11 +94,12 @@ button:active {
 }
 
 #reset {
-    background-color: #c01d4e;
+    background-color: #be3144;
+}
+#reset:hover {
+    transform: scale(1.1);
 }
 .footer {
-    position: fixed;
-    bottom: 0;
     width: 100%;
     text-align: center;
     padding-top: 5px;
@@ -108,8 +111,8 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    color: purple;
+#github:hover {
+    transform: scale(1.1);
 }
 
 img {
