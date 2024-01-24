@@ -24,7 +24,7 @@ body {
 
 #gameContainer {
     color: black;
-    width: 350px;
+    width: 450px;
     height: 600px;
     border-radius: 8px;
     box-shadow: -2px 2px 10px black;
@@ -116,5 +116,27 @@ a {
 }
 
 img {
-    height: 50px;
+    width: 50px;
+}
+
+@media (max-width: 768px) {
+    #gameContainer {
+        width: 325px;
+        font-size: small;
+    }
+    .para {
+        font-size: x-large;
+    }
+    .buttons {
+        gap: 20px;
+    }
+    #rock, #paper, #scissors {
+        width: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img {
+        width: 40px;
+    }
 }
